@@ -155,7 +155,7 @@
  *  @param title   title
  *  @param message message
  */
-+ (void)showNotificationWithTitle:(NSString *)title message:(NSString *)message;
++ (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message;
 /**
  *  showNotificationWithTitle message tapHandler
  *
@@ -163,7 +163,7 @@
  *  @param message    message
  *  @param tapHandler tapHandler
  */
-+ (void)showNotificationWithTitle:(NSString *)title message:(NSString *)message tapHandler:(FTNotificationTapHandler)tapHandler;
++ (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler;
 /**
  *  showNotificationWithTitle message tapHandler completion
  *
@@ -171,7 +171,7 @@
  *  @param message message
  *  @param tapHandler tapHandler
  */
-+ (void)showNotificationWithTitle:(NSString *)title message:(NSString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
++ (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
 /**
  *  showNotificationWithImage title message
  *
@@ -179,7 +179,7 @@
  *  @param title   title
  *  @param message message
  */
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSString *)message;
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message;
 /**
  *  showNotificationWithImage title message tapHandler
  *
@@ -188,7 +188,7 @@
  *  @param message    message
  *  @param tapHandler tapHandler
  */
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSString *)message tapHandler:(FTNotificationTapHandler)tapHandler;
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler;
 /**
  *  showNotificationWithImage title message tapHandler completion
  *
@@ -197,7 +197,7 @@
  *  @param message message
  *  @param tapHandler tapHandler
  */
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
 /**
  showNotificationWithImage title message autoDismiss tapHandler completion
  
@@ -210,7 +210,7 @@
  @param tapHandler tapHandler
  @param completion completion
  */
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSString *)message autoDismiss:(BOOL)autoDismiss tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message autoDismiss:(BOOL)autoDismiss tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
 /**
  *  dismissNotification
  */
