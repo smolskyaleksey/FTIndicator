@@ -321,8 +321,10 @@
 {
     if (!_iconImageView) {
         _iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kFTNotificationMargin_X, kFTNotificationStatusBarHeight + kFTNotificationMargin_Y, kFTNotificationImageSize, kFTNotificationImageSize)];
-        _iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _iconImageView.contentMode = UIViewContentModeScaleAspectFill;
         _iconImageView.backgroundColor = [UIColor clearColor];
+        _iconImageView.clipsToBounds = YES;
+        _iconImageView.layer.cornerRadius = _iconImageView.frame.size.height/2;
         [self.contentView addSubview:_iconImageView];
     }
     return _iconImageView;
