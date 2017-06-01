@@ -108,37 +108,39 @@
  */
 + (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message
 {
-    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES tapHandler:nil completion:nil];
+    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES  revers:NO tapHandler:nil completion:nil];
 }
 
 + (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler
 {
-    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES tapHandler:tapHandler completion:nil];
+    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES  revers:NO tapHandler:tapHandler completion:nil];
 }
 
 + (void)showNotificationWithTitle:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion
 {
-    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES tapHandler:tapHandler completion:completion];
+    [self showNotificationWithImage:nil title:title message:message autoDismiss:YES  revers:NO tapHandler:tapHandler completion:completion];
 }
 
 + (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message
 {
-    [self showNotificationWithImage:image title:title message:message autoDismiss:YES tapHandler:nil completion:nil];
+    [self showNotificationWithImage:image title:title message:message autoDismiss:YES  revers:NO tapHandler:nil completion:nil];
 }
 
 + (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler
 {
-    [self showNotificationWithImage:image title:title message:message autoDismiss:YES tapHandler:tapHandler completion:nil];
+    [self showNotificationWithImage:image title:title message:message autoDismiss:YES  revers:NO tapHandler:tapHandler completion:nil];
 }
 
 + (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion
 {
-    [self showNotificationWithImage:image title:title message:message autoDismiss:YES tapHandler:tapHandler completion:completion];
+    [self showNotificationWithImage:image title:title message:message autoDismiss:YES revers:NO tapHandler:tapHandler completion:completion];
 }
 
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message autoDismiss:(BOOL)autoDismiss tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message autoDismiss:(BOOL)autoDismiss
+                           revers:(BOOL)revers
+                       tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion
 {
-    [FTNotificationIndicator showNotificationWithImage:image title:title message:message autoDismiss:autoDismiss tapHandler:tapHandler completion:completion];
+    [FTNotificationIndicator showNotificationWithImage:image title:title message:message autoDismiss:autoDismiss revers:revers tapHandler:tapHandler completion:completion];
 }
 
 + (void)dismissNotification

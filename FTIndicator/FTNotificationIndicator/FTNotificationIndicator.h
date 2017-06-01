@@ -92,7 +92,7 @@ typedef void (^FTNotificationCompletion)(void);
  @param tapHandler tapHandler
  @param completion completion
  */
-+ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message autoDismiss:(BOOL)autoDismiss tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
++ (void)showNotificationWithImage:(UIImage *)image title:(NSString *)title message:(NSAttributedString *)message autoDismiss:(BOOL)autoDismiss revers:(BOOL)revers tapHandler:(FTNotificationTapHandler)tapHandler completion:(FTNotificationCompletion)completion;
 /**
  *  dismiss
  */
@@ -105,6 +105,7 @@ typedef void (^FTNotificationCompletion)(void);
  *  FTNotificationIndicatorView
  */
 @interface FTNotificationIndicatorView : UIVisualEffectView
+@property (nonatomic, assign)BOOL revers;
 /**
  *  showWithImage
  *
